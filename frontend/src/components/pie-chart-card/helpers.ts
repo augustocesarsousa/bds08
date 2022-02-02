@@ -22,16 +22,14 @@ export const buildPieChartConfig = (labels: string[] = []) => {
       show: true,
       floating: false,
       position: 'bottom',
-      offsetX: 50,
-      offsetY: 0,
-      width: 100,
+      offsetX: 20,
       labels: {
         colors: ['#8d8d8d']
       },
       fontFamily: 'Ubuntu, sans-serif',
       fontSize: '16px',
       itemMargin: {
-        vertical: 10
+        vertical: 5
       }
     },
     dataLabels: {

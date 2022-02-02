@@ -9,8 +9,16 @@ function App() {
     <>
       <Header />
       <div className="app-container">
-        <Filter />
-        <PieChartCard />
+        <Filter
+          onSubmitFilter={() => {
+            console.log('test');
+          }}
+        />
+        <PieChartCard
+          labels={['Feminino', 'Masculino', 'Outro']}
+          series={[50, 30, 20]}
+          totalValue={746484.0}
+        />
       </div>
     </>
   );

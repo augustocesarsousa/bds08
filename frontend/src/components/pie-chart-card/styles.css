@@ -20,6 +20,10 @@
   justify-content: center;
 }
 
+.apexcharts-legend.apexcharts-align-center {
+  flex-direction: column;
+}
+
 @media (min-width: 576px) {
   .pie-chart-card-content {
     padding: 40px;

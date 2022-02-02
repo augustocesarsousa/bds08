@@ -1,0 +1,33 @@
+.filter-container {
+  padding: 40px 15px;
+  margin-bottom: 10px;
+}
+
+.filter-select__control {
+  width: 270px;
+  height: 50px;
+}
+
+.select__placeholder,
+.filter-select__single-value {
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.015em;
+  color: var(--gray-color) !important;
+}
+
+.filter-select__clear-indicator,
+.filter-select__dropdown-indicator {
+  color: var(--gray-color) !important;
+}
+
+.filter-select__indicator-separator {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .filter-container {
+    padding: 40px 40px;
+    margin-bottom: 40px;
+  }
+}

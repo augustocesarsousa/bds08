@@ -1,0 +1,39 @@
+.pie-chart-card-content {
+  padding: 40px 15px;
+}
+
+.pie-chart-card-value {
+  font-size: 36px;
+  line-height: 41px;
+  color: var(--blue-color);
+}
+
+.pie-chart-card-legend {
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--gray-color);
+  margin-bottom: 50px;
+}
+
+.pie-chart-card {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 576px) {
+  .pie-chart-card-content {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .pie-chart-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .pie-chart-card {
+    width: 400px;
+  }
+}

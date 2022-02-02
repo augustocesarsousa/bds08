@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import Select from 'react-select';
 import { Store } from '../../types/store';
-import { requestRequest } from '../../utils/request';
+import { requestBackend } from '../../utils/request';
 import './styles.css';
 
 export type StoreData = {
@@ -31,7 +31,7 @@ function Filter({ onSubmitFilter }: Props) {
   };
 
   useEffect(() => {
-    requestRequest
+    requestBackend
       .get('/stores')
       .then((response) => {
         setSelectStores(response.data);

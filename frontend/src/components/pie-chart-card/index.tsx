@@ -4,8 +4,8 @@ import { buildPieChartConfig } from './helpers';
 import './styles.css';
 
 type Props = {
-  labels: string[];
-  series: number[];
+  labels?: string[];
+  series?: number[];
   totalValue: number;
 };
 

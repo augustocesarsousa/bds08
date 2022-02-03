@@ -6,7 +6,7 @@ import { requestBackend } from '../../utils/request';
 import './styles.css';
 
 export type StoreData = {
-  store: Store | null;
+  store: Store;
 };
 
 type Props = {
@@ -16,11 +16,7 @@ type Props = {
 function Filter({ onSubmitFilter }: Props) {
   const [selectStores, setSelectStores] = useState<Store[]>([]);
 
-  const { handleSubmit, setValue, getValues, control } = useForm<StoreData>();
-
-  const onSubmit = (formData: StoreData) => {
-    onSubmitFilter(formData);
-  };
+  const { setValue, getValues, control } = useForm<StoreData>();
 
   const handleChangeStore = (value: Store) => {
     setValue('store', value);
@@ -31,8 +27,7 @@ function Filter({ onSubmitFilter }: Props) {
   };
 
   useEffect(() => {
-    requestBackend
-      .get('/stores')
+    requestBackend({ url: '/stores' })
       .then((response) => {
         setSelectStores(response.data);
       })
@@ -43,7 +38,7 @@ function Filter({ onSubmitFilter }: Props) {
 
   return (
     <div className="filter-container base-card">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form>
         <Controller
           name="store"
           control={control}

@@ -9,7 +9,7 @@ type Props = {
   totalValue: number;
 };
 
-function PieChartCard({ labels, series, totalValue }: Props) {
+function PieChartCard({ labels = [], series = [], totalValue }: Props) {
   return (
     <div className="pie-chart-card-content base-card">
       <div className="pie-chart-card-data">

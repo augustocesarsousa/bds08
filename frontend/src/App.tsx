@@ -46,11 +46,9 @@ function App() {
       .then((response) => {
         const newSalesByGender = buildSalesByGenderChart(response.data);
         setSalesByGender(newSalesByGender);
-        console.log(newSalesByGender);
 
         const newTotalSum = sumSalesByGender(response.data);
         setTotalSum(newTotalSum);
-        console.log(newTotalSum);
       })
       .catch(() => {
         console.error('Erro to fetch sales by gender');
